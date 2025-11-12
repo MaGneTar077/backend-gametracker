@@ -7,7 +7,8 @@ const gameSchema = new mongoose.Schema({
     completed: { type: Boolean, default: false },
     rating: { type: Number, min: 0, max: 5, default: 0 },
     hoursPlayed: { type: Number, default: 0 },
-    createdAt: { type: Date, default: Date.now }
+    createdAt: { type: Date, default: Date.now },
+    userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true }
 });
 
 
